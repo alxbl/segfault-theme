@@ -1,0 +1,100 @@
+/*! segfault-theme |MIT| A minimalist hexo theme for https://segfault.me */
+
+$transparent = rgba(0,0,0,.05)
+$padding-base = 0.3em
+$margin-base = 0.5em
+
+$avatar-size = 75px
+
+$title-size = 2.5em
+$font-bold = 700
+
+// Theme Colors
+$fg-color = #212121
+$bg-color = #f1f1f1
+$accent = green
+$accent-hover = darken($accent, 30%)
+
+// Supplementary reset
+ul, ol, body, h1, h2, h3, h4, h5, h6, h7
+  margin 0
+  padding 0
+
+a
+  text-decoration none
+
+html
+  color $fg-color
+  font-family 'Noto Sans', sans-serif
+body
+  background $bg-color
+
+#w
+  margin 0 auto
+  margin-top 1em
+  width 90%
+
+#h
+  text-align center
+  border-bottom 1px solid $transparent
+  margin-bottom $margin-base
+  padding-bottom $padding-base
+  h1
+    font-size $title-size
+    font-weight $font-bold
+    margin-bottom $margin-base
+  h2
+    font-size 0.3 * $title-size
+    font-weight normal
+    font-style: italic
+  img
+    width $avatar-size
+    height $avatar-size
+    border-radius 50%
+    margin-bottom $margin-base
+  nav
+    margin-top 2 * $margin-base
+    a
+      display inline-block
+      margin-right $margin-base
+      font-weight $font-bold
+      &:last-child
+        margin-right 0
+
+#h, #f
+  ol li, ul li
+    display inline-block
+    padding 0 $padding-base
+
+#c
+  .nav
+    text-align center
+    font-size $title-size
+    a, a:visited, a:focus, a:active
+      color $accent
+      &.no
+        color rgba(0,0,0,0.3)
+
+#f
+  text-align center
+  border-top 1px solid $transparent
+  padding-top $padding-base
+
+/* Posts */
+@require '_partials/post'
+
+@media only screen and (min-width: 675px)
+  #w
+    width 650px
+
+/* Primary */
+a
+  color $accent
+  &:hover
+    color $accent-hover
+
+#f ul a 
+  color $fg-color
+  &:hover
+    color $accent-hover
+

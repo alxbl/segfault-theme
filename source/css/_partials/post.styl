@@ -1,0 +1,32 @@
+.p
+  margin-bottom 1 * $margin-base
+  padding 10px
+  &:hover
+    border-left 3px solid $accent
+    padding-left  7px // Must add up to .p padding
+    background rgba(0,0,0,0.02)
+  .title a
+    color $fg-color // Don't colorize link title
+  header
+    display flex
+    .date, .tags
+      flex-grow 0
+    .date
+      font-size 0.6 * $title-size
+      color $accent
+    .tags
+      margin-left 3 * $margin-base
+      text-align right
+      flex-grow 1
+      font-size 0.3 * $title-size
+      align-self center
+      overflow hidden
+      white-space nowrap
+      li
+        display inline-block
+        &:before
+          content "#"
+          color $accent
+      a:hover
+        text-decoration underline
+

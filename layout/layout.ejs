@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- <%- css('css/core') %> -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/core.css" rel="stylesheet" >
+  </head>
+    <body>
+      <div id="w">
+        <header id="h">
+          <h1><%- theme.title %></h1>
+          <img src="<%- theme.profile_image %>">
+          <h2><%- theme.subtitle %></h2>
+          <nav>
+            <% for (let i in theme.menu) { %>
+            <a href="<%- url_for(theme.menu[i]) %>"><%- i %></a>
+            <% } %>
+          </nav>
+        </header>
+        <div id="c">
+          <!-- <%- body %> -->
+          <div class="p">
+            <header>
+              <a><div class="date">2017/01/02</div></a>
+              <ul class="tags">
+                <li>Demo</li>
+                <li>Code</li>
+                <li>Meta</li>
+              </ul>
+            </header>
+            <div class="title"><a href="/">A very long post title that probably doesn't scale too well on mobile. Let's see about that.</a></div>
+          </div><div class="p">
+            <header>
+              <a><div class="date">2017/01/02</div></a>
+              <ul class="tags">
+                <li>Demo</li>
+                <li>Code</li>
+                <li>Meta</li>
+              </ul>
+            </header>
+            <div class="title"><a href="/">A very long post title that probably doesn't scale too well on mobile. Let's see about that.</a></div>
+          </div>
+          <section class="nav">
+            <a href="/" title="Show recent posts" class="no"><i class="fa fa-chevron-left"></i></a>
+            <a href="/" title="Show older posts"><i class="fa fa-chevron-right"></i></a>
+          </section>
+        </div>
+        <footer id="f">
+          <div>&copy; 2017 - @alxbl - &#9829; <a href="https://hexo.io" target="_blank">hexo</a></div>
+          <ul>
+            <% for (var l of theme.social) { %>
+            <li>
+              <a href="<%- l.url %>" target="_blank"><i class="fa <%- l.icon %>" title="<%- l.title %>"></i></a></li>
+            <% } %>
+          </ul>
+        </footer>
+      </div>
+    </body>
+</html>
