@@ -1,1 +1,8 @@
-A tag.
+<h1 class="tag title"><%- page.tag %></h1>
+<% page.posts.each(function(p) { %>
+<article>
+  <%- partial('./_partials/post_header', {p: p, index: true }) %>
+</article>
+<% }) %>
+<%- partial('./_partials/nav.ejs') %>
+

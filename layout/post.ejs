@@ -1,1 +1,6 @@
-A post.
+<article>
+  <%- partial('./_partials/post_header', { p: page, index: false }) %>
+  <main class="post">
+  <%- page.content %>
+  </main>
+</article>

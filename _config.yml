@@ -1,19 +1,16 @@
 menu:
-  Blog: /
-  About: /about.html
-  Archive: /archives
 
 profile_image: https://avatars1.githubusercontent.com/u/860411?s=460&v=4
 favico: /assets/favico.png
 
-title: Segfault
-subtitle: by alxbl
+title: segfault
+author: alxbl
 main_url: https://github.com/alxbl
 
 
 # Formats
-post_date_format: YYYY.MM.DD
-archive_date_format: MMM YYYY
+post_date_format: MMMM DD, YYYY
+archive_date_format: MMMM YYYY
 
 social:
   - url: https://github.com/alxbl
@@ -22,6 +19,6 @@ social:
   - url: https://stackoverflow.com/users/424216/alxbl
     icon: fa-stack-overflow
     title: alxbl @ stackoverflow
-  - url: https://twitter.com/alxbl
-    icon: fa-twitter
-    title: alxbl @ twitter
+  - url: /atom.xml
+    icon: fa-rss
+    title: ATOM feed

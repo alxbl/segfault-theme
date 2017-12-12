@@ -1,0 +1,9 @@
+<footer id="f">
+  <div>&copy; 2017 &mdash; <a href="<%- url_for(theme.main_url) %>" _target="blank"><%- config.author %></a> &#9829; <a href="https://hexo.io" target="_blank">hexo</a></div>
+  <ul>
+    <% for (var l of theme.social) { %>
+    <li>
+      <a href="<%- l.url %>" target="_blank"><i class="fa <%- l.icon %>" title="<%- l.title %>"></i></a></li>
+    <% } %>
+  </ul>
+</footer>

@@ -11,8 +11,8 @@ $font-bold = 700
 
 // Theme Colors
 $fg-color = #212121
-$bg-color = #f1f1f1
-$accent = green
+$bg-color = #fafafa
+$accent = #00bcd4
 $accent-hover = darken($accent, 30%)
 
 // Supplementary reset
@@ -33,6 +33,10 @@ body
   margin 0 auto
   margin-top 1em
   width 90%
+
+#c
+  .title
+    margin-bottom $margin-base
 
 #h
   text-align center
@@ -72,22 +76,21 @@ body
     font-size $title-size
     a, a:visited, a:focus, a:active
       color $accent
-      &.no
-        color rgba(0,0,0,0.3)
+    .no
+      color rgba(0,0,0,0.3)
 
 #f
   text-align center
   border-top 1px solid $transparent
   padding-top $padding-base
 
-/* Posts */
-@require '_partials/post'
 
+// Responsiveness
 @media only screen and (min-width: 675px)
   #w
     width 650px
 
-/* Primary */
+// Palette
 a
   color $accent
   &:hover
@@ -97,4 +100,8 @@ a
   color $fg-color
   &:hover
     color $accent-hover
+
+// Include all component styles
+@require '_partials/post'
+@require '_partials/markdown'
 

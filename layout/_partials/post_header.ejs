@@ -1,0 +1,11 @@
+<header>
+  <h1><a href="<%- url_for(p.path) %>"><%- p.title %></a></h1>
+  <div class="date"><%- date(p.date, theme.post_date_format) %></div>
+  <% if (p.tags && p.tags.length) { %>
+  <ul class="tags">
+    <% p.tags.forEach(function(t) { %>
+    <li class="tag"><a href="<%- url_for(t.path) %>"><%- t.name %></a></li>
+    <% }) %>
+  </ul>
+  <% } %>
+</header>
