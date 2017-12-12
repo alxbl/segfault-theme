@@ -1,7 +1,7 @@
 <header id="h">
   <h1><a href="<%- url_for('/') %>"><%- theme.title %></a></h1>
   <img src="<%- theme.profile_image %>">
-  <h2>by <a href="<%- theme.main_url %>" target="_blank"><%- theme.author %></h2>
+  <h2>by <a href="<%- theme.main_url %>" target="_blank"><%- theme.author %></a></h2>
   <nav>
     <% for (let i in theme.menu) { %>
     <a href="<%- url_for(theme.menu[i]) %>"><%- i %></a>
