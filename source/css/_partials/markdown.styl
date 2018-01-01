@@ -1,12 +1,19 @@
+// vim:tw=80:sw=2:ts=2
 // Markdown-rendered HTML
 main.post
   p
     margin-bottom $margin-base
     margin-top 0
     text-align justify
+    code
+      background $code-bg-color
+      border 1px solid $code-border-color
+      border-radius 3px
+      padding 1px 2px
 
   h1, h2, h3, h4, h5, h6
     margin 2 * $margin-base 0
 
   ul
-    margin-left: 4 * $margin-base
+    margin-left 8 * $margin-base
+    margin-bottom 4 * $margin-base
