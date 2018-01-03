@@ -1,72 +1,71 @@
 /* Darcula color scheme from the JetBrains family of IDEs */
 
-.hljs {
+.highlight {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   background: #2b2b2b;
 }
 
-.hljs {
+.highlight {
   color: #bababa;
 }
 
-.hljs-strong,
-.hljs-emphasis {
+.highlight .strong,
+.highlight .emphasis {
   color: #a8a8a2;
 }
 
-.hljs-bullet,
-.hljs-quote,
-.hljs-link,
-.hljs-number,
-.hljs-regexp,
-.hljs-literal {
+.highlight .bullet,
+.highlight .quote,
+.highlight .link,
+.highlight .number,
+.highlight .regexp,
+.highlight .literal {
   color: #6896ba;
 }
 
-.hljs-code,
-.hljs-selector-class {
+.highlight .selector-class {
   color: #a6e22e;
 }
 
-.hljs-emphasis {
+.highlight .emphasis {
   font-style: italic;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-section,
-.hljs-attribute,
-.hljs-name,
-.hljs-variable {
+.highlight .keyword,
+.highlight .selector-tag,
+.highlight .section,
+.highlight .attribute,
+.highlight .name,
+.highlight .variable {
   color: #cb7832;
 }
 
-.hljs-params {
+.highlight .params {
   color: #b9b9b9;
 }
 
-.hljs-string {
+.highlight .string {
   color: #6a8759;
 }
 
-.hljs-subst,
-.hljs-type,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-symbol,
-.hljs-selector-id,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-addition {
+.highlight .subst,
+.highlight .type,
+.highlight .built_in,
+.highlight .builtin-name,
+.highlight .symbol,
+.highlight .selector-id,
+.highlight .selector-attr,
+.highlight .selector-pseudo,
+.highlight .template-tag,
+.highlight .template-variable,
+.highlight .addition {
   color: #e0c46c;
 }
 
-.hljs-comment,
-.hljs-deletion,
-.hljs-meta {
+.highlight .comment,
+.highlight .deletion,
+.highlight .meta {
   color: #7f7f7f;
 }
