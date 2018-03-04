@@ -22,7 +22,10 @@
   <meta name="generator" content="hexo">
   <%- css('css/core') %>
 
-  <% if (config.title) { %>
-  <title><%- config.title %></title>
-  <% } %>
+  <%
+    let title = []
+    if (page.title) title.push(page.title);
+    if (config.title) title.push(config.title);
+  %>
+  <title><%- title.join(" | ") %></title>
 </head>
