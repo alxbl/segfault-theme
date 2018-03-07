@@ -1,31 +1,38 @@
 <head>
+  <%
+    let title = [];
+    if (page.title) title.push(page.title);
+    if (config.title) title.push(config.title);
+  %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Stylesheets -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <%- css('css/dracula') %>
+  <%- css('css/core') %>
   <link rel="icon" href="/favicon.png">
 
   <% if (config.feed && config.feed.path && ["rss", "atom"].includes(config.feed.type)) { %>
   <link rel="alternate" type="application/<%- config.feed.type %>+xml" href="<%- config.feed.path %>">
   <% } %>
 
+  <!-- Meta Tags -->
   <% if (config.author) { %>
   <meta name="author" content="<%- config.author %>">
   <% } %>
-
   <% if (config.description) { %>
   <meta name="description" content="<%- config.description %>">
+  <meta property="og:description" content="<%- config.description %>">
   <% } %>
-
   <meta name="generator" content="hexo">
-  <%- css('css/core') %>
 
-  <%
-    let title = []
-    if (page.title) title.push(page.title);
-    if (config.title) title.push(config.title);
-  %>
-  <title><%- title.join(" | ") %></title>
+  <!-- OpenGraph stuff -->
+  <meta property="og:title" content="<%- page.title || config.title %>">
+  <meta property="og:site_name" content="<%- config.title %>">
+  <meta property="og:type" content="<%- page.title ? 'article' : 'website' %>">
+
+  <title><%- title.join(" - ") %></title>
 </head>
